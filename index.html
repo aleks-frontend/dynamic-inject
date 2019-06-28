@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Dynamic Inject Test</title>
+    <style>
+        .footer {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Source elements -->
+    <div class="js-inject-src" data-target-id="footer-text">
+        Nullam quis ante. Maecenas vestibulum mollis diam. Proin magna. Vivamus laoreet. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi.Phasellus a est. Nunc nulla. Fusce pharetra convallis urna. Fusce egestas elit eget lorem. Ut tincidunt tincidunt erat.
+    </div>
+    <div class="js-inject-src" data-target-id="header-logo" data-is-image="true">
+        https://picsum.photos/id/319/200/300
+    </div>
+    <div class="js-inject-src" data-target-id="footer-bg" data-is-reposition="true">
+        <token-value class="token-value" id="value-23056282" data-clickable-props-list="[{&quot;parentId&quot;:null,&quot;valueId&quot;:23056282,&quot;variableId&quot;:63420,&quot;mergeId&quot;:null,&quot;allowedTextFormats&quot;:[],&quot;textType&quot;:&quot; &quot;,&quot;tagName&quot;:&quot;JBsm_background-image&quot;,&quot;isExternal&quot;:false}]"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; right: 0px; bottom: 0px;">
+        <div class="outfit-resizable-background" style="position: absolute; left: 0; top: 0; margin: 0; padding: 0; transform: scale(1.7865070059707242); -webkit-transform: scale(1.7865070059707242); transform-origin: top left; -webkit-transform-origin: top left;">
+        <img src="https://outfit-v2-exports-production.s3-ap-southeast-2.amazonaws.com/media_library_items/512f81b17b726c0d1d04e519ac7d2f58/bg2.jpg" left="1003" top="881" zoom="1.7865070059707242" style="position: absolute; left: -1003px; top: -881px; max-width: initial !important; height: auto !important;">
+        </div>
+        </div></token-value>
+    </div>
+    <!-- End Source elements -->
+
+    <!-- Target Elements -->
+    <div class="info__container" data-target="footer-text"></div><!-- end info__container -->
+    <img src="#" alt="Test Image" data-target="header-logo" />
+    <div class="footer" data-target="footer-bg"></div>
+    <!-- End Target Elements -->
+
+    <script src="js/dynamic-inject.js"></script>
 </body>
 </html>
