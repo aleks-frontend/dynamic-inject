@@ -43,3 +43,11 @@ Most important part here is to set the `data-is-image` attribute to **true**.
 <!-- Target Element -->
 <div class="some-class-for-styling" data-target="footer-bg"></div>
 ```
+**Important note:** When adding a source element for the input that is a repositional image, it shouldn't be set to `display:none` and shouldn't be placed inside of the hidden container. All the CSS required for it will be added dynamically here:
+```      
+if ( repositionCheck ) {
+    const targetInfo = targets[0].getBoundingClientRect();
+    const sourceCss = `position:absolute;left:0;top:0;opacity:0;width:${targetInfo.width}px;height:${targetInfo.height}px;`;
+    source.style.cssText = sourceCss;
+}```
+   
