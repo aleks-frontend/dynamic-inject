@@ -51,4 +51,11 @@ if ( repositionCheck ) {
     source.style.cssText = sourceCss;
 }
 ```
-   
+
+### Preventing conditional logic
+By default, target will be hidden if source is empty.
+
+But if you want to prevent this and not hide the target element if the source is empty, just add `data-prevent-conditional="true"` to target element.
+
+
+
